@@ -1220,8 +1220,18 @@ return {
           return ngx.exec("@grpcs")
         end
 
-        if service.request_buffering == false and http_version == 1.1 then
-          return ngx.exec("@unbuffered")
+        if http_version == 1.1 then
+          if service.request_buffering == false then
+            if service.response_buffering == false then
+              return ngx.exec("@unbuffered")
+            end
+
+            return ngx.exec("@unbuffered_request")
+          end
+        end
+
+        if service.response_buffering == false then
+          return ngx.exec("@unbuffered_response")
         end
       end
     end,

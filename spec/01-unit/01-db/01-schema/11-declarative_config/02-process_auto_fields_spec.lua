@@ -60,6 +60,7 @@ describe("declarative config: process_auto_fields", function()
               write_timeout = 60000,
               retries = 5,
               request_buffering = true,
+              response_buffering = true,
               _comment = "my comment",
               _ignore = { { foo = "bar" } },
             },
@@ -73,6 +74,7 @@ describe("declarative config: process_auto_fields", function()
               write_timeout = 60000,
               retries = 5,
               request_buffering = true,
+              response_buffering = true,
               _comment = "my comment",
               _ignore = { { foo = "bar" } },
             }
@@ -104,6 +106,7 @@ describe("declarative config: process_auto_fields", function()
               write_timeout = 60000,
               retries = 5,
               request_buffering = true,
+              response_buffering = true,
             }
           }
         }, config)
@@ -254,6 +257,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 plugins = {}
               }
             }
@@ -303,6 +307,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 _comment = "my comment",
                 _ignore = { { foo = "bar" } },
                 plugins = {
@@ -346,6 +351,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 plugins = {
                   {
                     name = "basic-auth",
@@ -398,6 +404,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 routes = {}
               }
             }
@@ -446,6 +453,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 routes = {
                   {
                     paths = { "/path" },
@@ -486,6 +494,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 routes = {
                   {
                     paths = { "/path" },
@@ -534,6 +543,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 routes = {
                   {
                     name = "foo",
@@ -598,6 +608,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 routes = {
                   {
                     name = "foo",
@@ -649,6 +660,7 @@ describe("declarative config: process_auto_fields", function()
                 write_timeout = 60000,
                 retries = 5,
                 request_buffering = true,
+                response_buffering = true,
                 routes = {
                   {
                     name = "bar",

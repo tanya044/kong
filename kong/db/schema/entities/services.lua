@@ -39,6 +39,7 @@ return {
     { write_timeout      = nonzero_timeout { default = 60000 }, },
     { read_timeout       = nonzero_timeout { default = 60000 }, },
     { request_buffering  = { type = "boolean", required = true, default = true }, },
+    { response_buffering = { type = "boolean", required = true, default = true }, },
     { tags               = typedefs.tags },
     { client_certificate = { type = "foreign", reference = "certificates" }, },
     { tls_verify         = { type = "boolean", }, },

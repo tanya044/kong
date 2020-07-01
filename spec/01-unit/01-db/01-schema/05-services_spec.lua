@@ -124,13 +124,14 @@ describe("services", function()
     -- acceptance
     it("should be greater than zero", function()
       local service = {
-        host              = "example.com",
-        port              = 80,
-        protocol          = "https",
-        connect_timeout   = 1,
-        read_timeout      = 10,
-        write_timeout     = 100,
-        request_buffering = true,
+        host               = "example.com",
+        port               = 80,
+        protocol           = "https",
+        connect_timeout    = 1,
+        read_timeout       = 10,
+        write_timeout      = 100,
+        request_buffering  = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
@@ -242,6 +243,7 @@ describe("services", function()
         path = "/",
         port = 80,
         request_buffering = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
@@ -256,6 +258,7 @@ describe("services", function()
         path = "/abcd~user~2",
         port = 80,
         request_buffering = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
@@ -273,6 +276,7 @@ describe("services", function()
           path = valid_paths[i],
           port = 80,
           request_buffering = true,
+          response_buffering = true,
         }
 
         local ok, err = Services:validate(service)
@@ -288,6 +292,7 @@ describe("services", function()
         path = "/ovo/",
         port = 80,
         request_buffering = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
@@ -401,6 +406,7 @@ describe("services", function()
           host = valid_hosts[i],
           port = 80,
           request_buffering = true,
+          response_buffering = true,
         }
 
         local ok, err = Services:validate(service)
@@ -444,6 +450,7 @@ describe("services", function()
         local service = {
           name = invalid_names[i],
           request_buffering = true,
+          response_buffering = true,
         }
 
         local ok, err = Services:validate(service)
@@ -474,6 +481,7 @@ describe("services", function()
           port = 80,
           name = valid_names[i],
           request_buffering = true,
+          response_buffering = true,
         }
 
         local ok, err = Services:validate(service)
@@ -490,6 +498,7 @@ describe("services", function()
         host = "x.y",
         port = 80,
         request_buffering = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
@@ -503,6 +512,7 @@ describe("services", function()
         host = "x.y",
         port = 80,
         request_buffering = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
@@ -516,6 +526,7 @@ describe("services", function()
         host = "x.y",
         port = 80,
         request_buffering = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
@@ -529,6 +540,7 @@ describe("services", function()
         host = "x.y",
         port = 80,
         request_buffering = true,
+        response_buffering = true,
       }
 
       local ok, err = Services:validate(service)
