@@ -37,6 +37,7 @@ env:
     - KONG_TEST_PG_HOST=localhost
     - JOBS=2
     - DOCKER_MACHINE_ARM64_NAME=travis-ci-kong-${TRAVIS_JOB_ID}
+    - KONG_BUILD_TOOLS_BRANCH=feat/openresty-1.17.8.1
   matrix:
     - KONG_TEST_DATABASE=postgres TEST_SUITE=integration
     - KONG_TEST_DATABASE=cassandra CASSANDRA=2.2 TEST_SUITE=integration
