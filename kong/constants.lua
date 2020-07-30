@@ -154,8 +154,8 @@ local constants = {
       -- also accepts a DEPRECATED key, i.e. DEPRECATED = "9.4"
     },
     CASSANDRA = {
-      MIN = "2.2",
-      -- also accepts a DEPRECATED key
+      MIN = "3.0",
+      DEPRECATED = "2.0",
     }
   },
   PROTOCOLS = protocols,
